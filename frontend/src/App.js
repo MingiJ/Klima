@@ -7,6 +7,12 @@ import Activate from "./pages/Activate";
 import ResetPassword from "./pages/ResetPassword";
 import ResetPasswordConfirm from "./pages/ResetPasswordConfirm";
 
+//importing app pages.
+import EducativePage from "./pages/appPages/EducativePage";
+import EventsPage from "./pages/appPages/EventsPage";
+import ClimatePage from "./pages/appPages/ClimatePage";
+import PollingPage from "./pages/appPages/PollingPage";
+
 import { Provider } from "react-redux";
 import store from "./store";
 import Layout from "./HOCs/Layout";
@@ -17,14 +23,18 @@ const App = () => (
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/reset-password" component={ResetPassword} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/reset-password" component={ResetPassword} />
           <Route
             exact
             path="/password/reset/confirm/:uid/token"
             component={ResetPasswordConfirm}
           />
+          <Route path="/EventsPage" component={EventsPage} />
+          <Route path="/PollingPage" component={PollingPage} />
+          <Route path="/ClimatePage" component={ClimatePage} />
+          <Route path="/EducativePage" component={EducativePage} />
           <Route exact path="/activate/:uid/token" component={Activate} />
         </Switch>
       </Layout>
