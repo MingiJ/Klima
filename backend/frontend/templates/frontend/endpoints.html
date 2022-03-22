@@ -1,0 +1,198 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    endpoints
+{% endblock title %}
+
+{% block content %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 nav-tabs-bg">
+          <ul class="nav nav-tabs flex-column" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link nav-link-tabs  active" data-bs-toggle="tab" href="#home">Authentication</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-tabs" data-bs-toggle="tab" href="#menu1">Polls</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-tabs" data-bs-toggle="tab" href="#menu2">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-tabs" data-bs-toggle="tab" href="#menu3">Educative</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-tabs" data-bs-toggle="tab" href="#menu4">Climate</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-10">
+          <div class="card card-content">
+            <div class="tab-content">
+
+
+
+              <div id="home" class="container tab-pane active"><br>
+                <h3>Authentication Endpoints</h3>
+                <div class="row">
+                  <p class="text-muted">Create User</p>
+                  <div class="col-md-3">
+                    <button class="btn btn-danger btn-block">Post request</button>
+                  </div>
+                  <div class="col-md-8">
+                    <p id="clipboardExample1"">http://127.0.0.1:8000/auth/users/</p>
+                  </div>
+                  
+                </div>
+                <hr>
+                <div class="row">
+                  <hp class="text-muted">User Activation Email</hp>
+                  <div class="col-md-3">
+                    <button class="btn btn-danger btn-block">Post request</button>
+                  </div>
+                  <div class="col-md-8">
+                    <p>http://127.0.0.1:8000/auth/users/activation/</p>
+                  </div>
+                </div>
+                <hr>
+                 
+
+                <div class="row">
+                  <p class="text-muted">User Login</p>
+                  <div class="col-md-3">
+                    <button class="btn btn-danger btn-block">Post request</button>
+                  </div>
+                  <div class="col-md-8">
+                    <p>http://127.0.0.1:8000/auth/jwt/create/</p>
+                  </div>
+                  
+                </div>
+
+                <hr>
+                <div class="row">
+                  <p class="text-muted">Password Reset Route</p>
+                  <div class="col-md-3">
+                    <button class="btn btn-danger btn-block">Post request</button>
+                  </div>
+                  <div class="col-md-8">
+                    <p>http://127.0.0.1:8000/auth/users/reset_password/</p>
+                  </div>
+                  
+                </div>
+                <hr>
+
+                <div class="row">
+                  <p class="text-muted">Password Reset Confirm</p>
+                  <div class="col-md-3">
+                    <button class="btn btn-danger btn-block">Post request</button>
+                  </div>
+                  <div class="col-md-8">
+                    <p>http://127.0.0.1:8000/auth/users/reset_password_confirm/</p>
+                  </div>
+                  
+                </div>
+
+              </div>
+
+
+
+
+
+              <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Polls</h3>
+                <div class="row">
+                  <p class="text-muted">Create Post</p>
+                  <div class="col-md-3">
+                    <button class="btn btn-danger btn-block">GET request</button>
+                  </div>
+                  <div class="col-md-8">
+                    <p>http://127.0.0.1:8000/polls/</p>
+                  </div>
+                  
+                </div>
+                <hr>
+                <div class="row">
+                  <p class="text-muted">Get Posts</p>
+                  <div class="col-md-3">
+                    <button class="btn btn-danger btn-block">GET request</button>
+                  </div>
+                  <div class="col-md-8">
+                    <p>http://127.0.0.1:8000/polls/</p>
+                  </div>
+                  
+                </div>
+                <h6 class="text-center mt-5 mb-5">Performing operations like <strong class="text-danger">PUT</strong>, <strong class="text-danger">DELETE</strong>. Must include the <strong class="text-danger">ID</strong> of the specified post. </h6>
+                <hr>
+                <div class="row">
+                  
+                  <p class="text-muted">Update a Post</p>
+                  <div class="col-md-3">
+                    <button class="btn btn-danger btn-block">PUT request</button>
+                  </div>
+                  <div class="col-md-8">
+                    <p>http://127.0.0.1:8000/polls/{id}/</p>
+                  </div>
+                  
+                </div>
+                <hr>
+                <div class="row">
+                  
+                  <p class="text-muted">Delete a Post</p>
+                  <div class="col-md-3">
+                    <button class="btn btn-danger btn-block">DELETE request</button>
+                  </div>
+                  <div class="col-md-8">
+                    <p>http://127.0.0.1:8000/polls/{id}/</p>
+                  </div>
+                  
+                </div>
+                <hr>
+              </div>
+
+
+
+
+              <div id="menu2" class="container tab-pane fade"><br>
+                <h3>Events</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+              </div>
+
+              <div id="menu3" class="container tab-pane fade"><br>
+                <h3>Educative</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+              </div>
+
+
+              <div id="menu4" class="container tab-pane fade"><br>
+                <h3>Climate</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    
+      <!-- Tab panes -->
+     
+    </div>
+
+
+
+
+
+    <!-- <h3>Authentications</h3>
+                <div class="container">
+                  
+                 
+                 
+                  
+                  
+
+                </div> -->
+
+{% endblock content %}
+    

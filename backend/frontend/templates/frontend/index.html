@@ -1,0 +1,59 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Ndovu
+{% endblock title %}
+    
+
+
+{% block content %}
+    <div class="container-fluid hero__section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 hero__section-main">
+                    <div class="hero__section-header">
+                        <h1 class="hero__section-h1">Team Ndovu API</h1>
+                    </div>
+                    <div class="hero__section-desc">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium placeat, ducimus aliquam perferendis reprehenderit eveniet ullam adipisci incidunt! Nisi et voluptas facilis id quod praesentium earum porro minus a ex?</p>
+                    </div>
+                    <div class="hero__btn">
+                        <a href="{% url 'endpoints' %}" class="hero__section-btn">View Endpoints</a>
+                    </div>
+                </div>
+                <div class="col-md-4 hero__section_image">
+                    <div class="row hero_image">
+                        <img class="hero_img-item" src="{% static 'images/ndovu.png' %}" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- <div class="container">
+        <div class="row">
+           <div class="col-md-4">
+               <div class="card"></div>
+           </div>
+        </div>
+    </div> -->
+    <div class="container support">
+        <div class="row">
+            <div class="col-md-3">
+                <h1 class="hero__section-h1">Powered By</h1>
+            </div>
+            
+            <div class="col-md-4">
+                <img  class="img-fluid" src="{% static 'images/microsoft.png' %}" alt="img">
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock content %}
+    

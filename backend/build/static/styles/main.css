@@ -1,0 +1,126 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;800&display=swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+
+}
+
+/* navbar section  */
+.bg-darkblue{
+    background: rgba( 2, 6, 28, 0.9);
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    
+}
+/* end of navbar section  */
+
+/* hero section  */
+
+.hero__section{
+    height: 80vh;
+   
+
+}
+.hero__section-header{
+    margin-top: 5rem;
+}
+.hero__section-h1{
+    color: #040b21;
+    font-size: 60px;
+    font-weight: 900;
+}
+.hero__section-main {
+   background-color: white;
+}
+.hero__section_image{
+    height: 450px;
+    width: 450px;
+    background: whitesmoke;
+    border-radius: 50%;
+    box-shadow: -30px 8px 82px 12px rgba(0,0,0,0.51);
+-webkit-box-shadow: -30px 8px 82px 12px rgba(0,0,0,0.51);
+-moz-box-shadow: -30px 8px 82px 12px rgba(0,0,0,0.51);
+}
+
+
+
+.hero__section-desc{
+    color: #080602;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+    font-size: 20px;
+}
+.hero__btn{
+    margin-top: 4rem;
+}
+.hero__section-btn{
+    background-color: rgba( 2, 6, 28, 0.9);
+    padding: 15px 60px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+    border-radius: 60px;
+    transition: all 0.5s ease-in-out;
+}
+.hero__section-btn:hover{
+    background-color: #040b21;
+    color: white;
+}
+
+.support{
+    background-color: gainsboro;
+    margin-top: 1rem;
+    border-left: 3px solid #040b21;
+    margin-bottom: 3rem;
+}
+
+/* end of hero section  */
+
+/* endpoints  */
+.nav-tabs-bg{
+    background-color: #040b21;
+    margin-top: 0;
+    /* height: 100vh; */
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+.nav-link-tabs {
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 16px;
+}
+.nav-link-tabs:hover{
+    background-color: whitesmoke;
+    color: #080602;
+    border-left: 3px solid #080602;
+}
+.card-content{
+    margin-top: 2rem;
+    border: 2px solid #040b21;
+}
+.btn-danger{
+    background-color: #040b21;
+    color: white;
+    border: none !important;
+}
+.btn-danger:hover{
+    color: whitesmoke !important;
+    background-color: #080602 !important;
+
+}
+/* end of endpoints  */
+
+
+@media screen and (max-width: 1300px){
+    .hero__section_image{
+        display: none;
+    }
+}
+
