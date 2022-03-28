@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 from accounts.models import UserAccount
 
@@ -23,7 +24,7 @@ class Events(models.Model):
     link = models.CharField(max_length = 200)
     image = models.ImageField(upload_to = 'build/images')
     description = models.TextField()
-    date_of_the_event = models.DateTIimeField()
+    date_of_the_event = models.DateTimeField()
 
 
     def __str__(self):
@@ -33,3 +34,19 @@ class Events(models.Model):
     class Meta:
         verbose_name = "Events"
         verbose_name_plural = "Events"
+
+class Educative(models.Model):
+    title = models.CharField(max_length = 100)
+    description = models.TextField()
+    image     = models.ImageField(upload_to='builf/images', blank = True, null = True)
+    date_posted = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.title}"
+
+    class Meta:
+        verbose_name = "Educative"
+        verbose_name_plural = "Educatives"
+
+    
+
