@@ -1,15 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
+
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Activate from "./pages/Activate";
 import ResetPassword from "./pages/ResetPassword";
 import ResetPasswordConfirm from "./pages/ResetPasswordConfirm";
-
+import './app.css'
 import { Provider } from "react-redux";
 import store from "./store";
 import Layout from "./HOCs/Layout";
+import Home from "./pages/home/Home";
+import Events from "./pages/events/Events";
+
 
 const App = () => (
   <Provider store={store}>
@@ -17,6 +20,7 @@ const App = () => (
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/events" component={Events} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/reset-password" component={ResetPassword} />
